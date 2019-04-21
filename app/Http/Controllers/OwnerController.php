@@ -28,6 +28,7 @@ class OwnerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // View
     public function index()
     {
         $barangs = Barang::sortable()->paginate(10);
@@ -43,9 +44,7 @@ class OwnerController extends Controller
     public function ownerTransaksi()
     {
         $transaksis = Transaksi::sortable()->paginate(10);
-        $pelanggans = Pelanggan::all();
-        $barangs = Barang::all();
-        return view('ownerTransaksi', compact('transaksis','pelanggans','barangs'));
+        return view('ownerTransaksi', compact('transaksis'));
     }
 
     // METHOD CETAK PDF BARANG
@@ -158,6 +157,9 @@ class OwnerController extends Controller
     function get_post_data_transaksi()
     {
      $transaksis = DB::table('transaksis')
+        ->select('pelanggans.nama as a1','barangs.nama as a2','transaksis.ukuran','transaksis.harga_total')
+        ->join('pelanggans','transaksis.pelanggan_id','=','pelanggans.id')
+        ->join('barangs','transaksis.barang_id','=','barangs.id')
          ->get();
     return ($transaksis);
     }
@@ -188,8 +190,8 @@ class OwnerController extends Controller
        
       $output .= '
       <tr>
-       <td style="border: 1px solid; padding:12px; text-align:center;">'.$transaksi->pelanggan_id.'</td>
-       <td style="border: 1px solid; padding:12px; text-align:center;">'.$transaksi->barang_id.'</td>
+       <td style="border: 1px solid; padding:12px; text-align:center;">'.$transaksi->a1.'</td>
+       <td style="border: 1px solid; padding:12px; text-align:center;">'.$transaksi->a2.'</td>
        <td style="border: 1px solid; padding:12px; text-align:center;">'.$transaksi->ukuran.' m</td>
        <td style="border: 1px solid; padding:12px; text-align:center;">Rp.'.$transaksi->harga_total.',00</td>
       </tr>

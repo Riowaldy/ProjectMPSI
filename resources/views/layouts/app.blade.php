@@ -12,6 +12,16 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" integrity="sha384-PmY9l28YgO4JwMKbTvgaS7XNZJ30MK9FAZjjzXtlqyZCqBY6X6bXIkM++IkyinN+" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap-theme.min.css" integrity="sha384-jzngWsPS6op3fgRCDTESqrEJwRKck+CILhJVO5VvaAZCq8JYf8HsR/HPpBOOPZfR" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js" integrity="sha384-vhJnz1OVIdLktyixHY4Uk3OHEwdQqPppqYR8+5mjsauETgLOcEynD9oPHhhz18Nw" crossorigin="anonymous">
+    </script>
+    
+    <link rel="stylesheet" href="{{ asset('css/select2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/parsley.min.css') }}">
 </head>
 <body>
     <div id="app">
@@ -78,5 +88,23 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script>
+        $('#info_barang').on('show.bs.modal', function (event) {
+          var button = $(event.relatedTarget)
+          var id = button.data('id') 
+          var nama = button.data('nama') 
+          var jenis = button.data('jenis')
+          var supplier = button.data('supplier')
+          var harga = button.data('harga')
+          var total = button.data('total') 
+          var modal = $(this)
+          modal.find('.modal-body #id').val(id);
+          modal.find('.modal-body #nama').val(nama);
+          modal.find('.modal-body #jenis').val(jenis);
+          modal.find('.modal-body #supplier').val(supplier);
+          modal.find('.modal-body #harga').val(harga);
+          modal.find('.modal-body #total').val(total);
+        })
+    </script>
 </body>
 </html>

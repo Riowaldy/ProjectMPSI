@@ -17,6 +17,7 @@
                       <th><b>@sortablelink('barang->nama','Nama Barang')</b></th>
                       <th><b>@sortablelink('ukuran')</b></th>
                       <th><b>@sortablelink('harga_total','Total Harga')</b></th>
+                      <th><b>@sortablelink('created_at','Waktu Transaksi')</b></th>
                       <td>
                         <form action="{{ route('owner.TransaksiPDF') }}">
                         {{ csrf_field() }}
@@ -30,7 +31,8 @@
                       <td>{{ $transaksi->barang->nama }}</td>
                       <td>{{ $transaksi->ukuran }} m</td>
                       <td>Rp.{{ $transaksi->harga_total }},00</td>
-                      <td><button type="submit" title="Tambah Data" class="btn btn-xs btn-info">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Info&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+                      <td>{{ $transaksi->created_at }}</td>
+                      <td></td>
                     </tr>
                     @endforeach
                 </table>

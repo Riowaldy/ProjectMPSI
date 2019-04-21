@@ -39,7 +39,19 @@
                 <li><a href="#about" class="page-scroll">About</a></li>
                 <li><a href="#portfolio" class="page-scroll">Products</a></li>
                 <li><a href="#contact" class="page-scroll">Contact</a></li>
-                <li><a href="{{ route('login') }}" class="page-scroll">Login</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>Login<span class="caret"></span>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="{{ route('admin.login') }}">As Admin</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('login') }}">As Owner</a>
+                        </li>
+                    </ul>
+                </li>
               </ul>
             </div>
           </div>
@@ -164,7 +176,7 @@
       <div class="container text-center">
         <div class="row">
           <div class="col-sm-12">
-            <p>&copy; copyright 2019 | built with <i class="glyphicon glyphicon-heart"></i> by <a href="https://www.instagram.com/6ded/">Riowaldy Indrawan.</a></p>
+            <p>&copy; copyright 2019 | Build by Riowaldy Indrawan</a></p>
           </div>
         </div>
       </div>

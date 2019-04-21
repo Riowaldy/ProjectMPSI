@@ -10,7 +10,7 @@ class Transaksi extends Model
     use Sortable;
     protected $fillable = [
         'pelanggan_id', 'barang_id', 'ukuran', 'harga_total',
-    ];
+    ];          
 
     public function pelanggan()
     {

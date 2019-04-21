@@ -104,9 +104,15 @@
                 <label for="input_nama">Nama Pelanggan</label>
                 <input type="text" name="nama_pelanggan" id="nama_pelanggan" class="form-control" value="" readonly>
               </div>
+              
               <div class="form-group">
-                <label for="input_nama">ID Barang</label>
-                <input type="text" name="barang_id" id="barang_id" class="form-control" placeholder="Tulis ID Barang">
+                <label for="input_nama">Nama Barang</label>
+                <select name="barang_id" id="barang_id" class="form-control dynamic">
+                 <option value="">Pilih Nama Barang</option>
+                   @foreach($barang as $b)
+                    <option value="{{ $b->id}}">{{ $b->nama }}</option>
+                   @endforeach
+                </select>
               </div>
               <div class="form-group">
                 <label for="input_nama">Ukuran</label>
@@ -117,33 +123,6 @@
                 <input type="text" name="harga_total" id="harga_total" class="form-control" placeholder="Tulis Harga Barang">
               </div>   
 
-              <!-- <div class="form-group">
-                <select name="jenisbarang" id="jenis_barang" class="form-control dynamic" data-dependent="namabarang">
-                 <option value="">Pilih Jenis Barang</option>
-                   @foreach($barang as $barang)
-                    <option value="{{ $barang->jenis}}">{{ $barang->jenis }}</option>
-                   @endforeach
-                </select>
-              </div>
-
-              <div class="form-group">
-                <select name="namabarang" id="nama_barang" class="form-control dynamic" data-dependent="hargabarang">
-                 <option value="">Pilih Nama Barang</option>
-                  @foreach($barangg as $baran)
-                    <option value="{{ $baran->id}}">{{ $baran->nama }}</option>
-                  @endforeach
-                </select>
-              </div>
-              
-              <div class="form-group">
-                <select name="hargabarang" id="hargabarang" class="form-control">
-                 <option value="">Pilih Harga</option>
-                 @foreach($barangg as $baran)
-                    <option value="{{ $baran->id}}">{{ $baran->harga }}</option>
-                  @endforeach
-                </select>
-              </div>
-              {{ csrf_field() }} -->
               <div class="modal-footer">
                 <button type="submit" class="btn btn-primary">Save</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -234,40 +213,5 @@
   </div>
   <!-- Akhir Modal Delete -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
 
- $('.dynamic').change(function(){
-  if($(this).val() != '')
-  {
-   var select = $(this).attr("id");
-   var value = $(this).val();
-   var dependent = $(this).data('dependent');
-   var _token = $('input[name="_token"]').val();
-   $.ajax({
-    url:"{{ route('admin.tambahPelanggan.fetch') }}",
-    method:"POST",
-    data:{select:select, value:value, _token:_token, dependent:dependent},
-    success:function(result)
-    {
-     $('#'+dependent).html(result);
-    }
-
-   })
-  }
- });
-
- $('#jenisbarang').change(function(){
-  $('#namabarang').val('');
-  $('#hargabarang').val('');
- });
-
- $('#namabarang').change(function(){
-  $('#hargabarang').val('');
- });
-
- 
-
-});
-</script>
 @endsection

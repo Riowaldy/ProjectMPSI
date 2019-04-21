@@ -39,44 +39,20 @@ class AdminController extends Controller
     {
         $pelanggans = Pelanggan::sortable()->paginate(10);
         $barang = DB::table('barangs')
-         ->groupBy('jenis')
+         // ->groupBy('jenis')
          ->get();
-        $barangg = Barang::all();
-        $barang1 = DB::table('barangs')
-         ->where('jenis','wallpaper')
-         ->get();
-        $barang2 = DB::table('barangs')
-         ->where('jenis','blinds')
-         ->get();
-        $barang3 = DB::table('barangs')
-         ->where('jenis','gorden')
-         ->get();
-        return view('adminPelanggan', compact('pelanggans','barang','barangg','barang1','barang2','barang3'));
-    }
-
-    function fetch(Request $request)
-    {
-     $select = $request->get('select');
-     $value = $request->get('value');
-     $dependent = $request->get('dependent');
-     $data = DB::table('barangs')
-       ->where($select, $value)
-       ->groupBy($dependent)
-       ->get();
-     $output = '<option value="">Select '.ucfirst($dependent).'</option>';
-     foreach($data as $row)
-     {
-      $output .= '<option value="'.$row->$dependent.'">'.$row->$dependent.'</option>';
-     }
-     echo $output;
+        return view('adminPelanggan', compact('pelanggans','barang'));
     }
 
     public function adminTransaksi()
     {
         $transaksis = Transaksi::sortable()->paginate(10);
-        $pelanggans = Pelanggan::all();
-        $barangs = Barang::all();
-        return view('adminTransaksi', compact('transaksis','pelanggans','barangs'));
+        // $transaksis = DB::table('transaksis')
+        // ->select('pelanggans.nama as a1','barangs.nama as a2','transaksis.ukuran','transaksis.harga_total','transaksis.created_at')
+        // ->join('pelanggans','transaksis.pelanggan_id','=','pelanggans.id')
+        // ->join('barangs','transaksis.barang_id','=','barangs.id')
+        //  ->paginate(10);
+        return view('adminTransaksi', compact('transaksis'));
     }
 
 

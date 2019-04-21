@@ -13,7 +13,6 @@
                 <!-- Table -->
                 <table class="table">
                     <tr>
-                      <th><b>@sortablelink('id')</b></th>
                       <th><b>@sortablelink('nama')</b></th>
                       <th><b>@sortablelink('jenis')</b></th>
                       <th><b>@sortablelink('supplier')</b></th>
@@ -23,7 +22,6 @@
                     <tr>
                     @foreach($barangs as $barang)
                     <tr>
-                      <td>{{ $barang->id }}</td>
                       <td>{{ $barang->nama }}</td>
                       <td>{{ $barang->jenis }}</td>
                       <td>{{ $barang->supplier }}</td>

@@ -13,7 +13,6 @@
                 <!-- Table -->
                 <table class="table">
                     <tr>
-                      <th><b>@sortablelink('id','ID')</b></th>
                       <th><b>@sortablelink('nama')</b></th>
                       <th><b>@sortablelink('jenis')</b></th>
                       <th><b>@sortablelink('supplier')</b></th>
@@ -29,12 +28,11 @@
                     <tr>
                     @foreach($barangs as $barang)
                     <tr>
-                      <td>{{ $barang->id }}</td>
                       <td>{{ $barang->nama }}</td>
                       <td>{{ $barang->jenis }}</td>
                       <td>{{ $barang->supplier }}</td>
                       <td>Rp.{{ $barang->harga }},00</td>
-                      <td><button type="submit" title="Tambah Data" class="btn btn-xs btn-info">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Info&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+                      <td></td>
                     </tr>
                     @endforeach
                 </table>

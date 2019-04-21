@@ -19,10 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'OwnerController@index')->name('home');
 Route::group(['prefix' => 'owner'], function(){
-	
+	// View
 	Route::get('/ownerPelanggan', 'OwnerController@ownerPelanggan')->name('owner.pelanggan')->middleware('auth');
 	Route::get('/ownerTransaksi', 'OwnerController@ownerTransaksi')->name('owner.transaksi')->middleware('auth');
 
+	// Info
+	Route::post('/infoBarang','OwnerController@OwnerInfoBarang')->name('owner.infoBarang')->middleware('auth');
 	// Route PDF
 	Route::get('/dynamic_pdfBarang','OwnerController@indexBarangPDF')->name('owner.BarangPDF')->middleware('auth');
     Route::get('/dynamic_pdf/pdfBarang','OwnerController@pdfBarangPDF')->name('owner.BarangPDF')->middleware('auth');
@@ -46,7 +48,6 @@ Route::group(['prefix' => 'admin'], function(){
 	// Create
 	Route::post('/barang','AdminController@AdminBarangStore')->name('admin.tambahBarang')->middleware('auth:admin');
 	Route::post('/pelanggan','AdminController@AdminPelangganStore')->name('admin.tambahPelanggan')->middleware('auth:admin');
-	Route::post('/pelanggan/fetch', 'AdminController@fetch')->name('admin.tambahPelanggan.fetch');
 	Route::post('/transaksi','AdminController@AdminTransaksiStore')->name('admin.tambahTransaksi')->middleware('auth:admin');
 
 	// Update

@@ -29,7 +29,7 @@
                       <td>{{ $pelanggan->nama }}</td>
                       <td>{{ $pelanggan->alamat }}</td>
                       <td>{{ $pelanggan->no_tlp }}</td>
-                      <td><button type="submit" title="Tambah Data" class="btn btn-xs btn-info">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Info&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+                      <td></td>
                     </tr>
                     @endforeach
                 </table>
