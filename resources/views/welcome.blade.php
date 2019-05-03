@@ -102,42 +102,62 @@
         <div class="row">
           <div class="col-sm-3">
             <a href="" class="thumbnail">
-              <img src="img/1.jpg">
+              <img src="img/blinds1.jpg">
             </a>
           </div>
           <div class="col-sm-3">
             <a href="" class="thumbnail">
-              <img src="img/1.jpg">
+              <img src="img/blinds2.jpg">
             </a>
           </div>
           <div class="col-sm-3">
             <a href="" class="thumbnail">
-              <img src="img/1.jpg">
+              <img src="img/blinds3.jpg">
             </a>
           </div>
           <div class="col-sm-3">
             <a href="" class="thumbnail">
-              <img src="img/1.jpg">
+              <img src="img/blinds4.jpg">
             </a>
           </div>
           <div class="col-sm-3">
             <a href="" class="thumbnail">
-              <img src="img/1.jpg">
+              <img src="img/wallpaper1.jpg">
             </a>
           </div>
           <div class="col-sm-3">
             <a href="" class="thumbnail">
-              <img src="img/1.jpg">
+              <img src="img/wallpaper2.jpg">
             </a>
           </div>
           <div class="col-sm-3">
             <a href="" class="thumbnail">
-              <img src="img/1.jpg">
+              <img src="img/wallpaper3.jpg">
             </a>
           </div>
           <div class="col-sm-3">
             <a href="" class="thumbnail">
-              <img src="img/1.jpg">
+              <img src="img/wallpaper4.jpg">
+            </a>
+          </div>
+          <div class="col-sm-3">
+            <a href="" class="thumbnail">
+              <img src="img/gorden1.jpg">
+            </a>
+          </div>
+          <div class="col-sm-3">
+            <a href="" class="thumbnail">
+              <img src="img/gorden2.jpg">
+            </a>
+          </div>
+          <div class="col-sm-3">
+            <a href="" class="thumbnail">
+              <img src="img/gorden3.jpg">
+            </a>
+          </div>
+          <div class="col-sm-3">
+            <a href="" class="thumbnail">
+              <img src="img/gorden4.jpg">
             </a>
           </div>
         </div>
@@ -156,7 +176,7 @@
             <div class="row">
               <div class="col-sm-8 col-sm-offset-2 ">
                 <div class="list-group">
-                  <a href="#" class="list-group-item active">
+                  <a href="#" class="list-group-item active text-center">
                     CV. TITA JAYA
                   </a>
                   <a href="#" class="list-group-item">Telp     : 081 3340 98 907 / 081 7090 1927</a>

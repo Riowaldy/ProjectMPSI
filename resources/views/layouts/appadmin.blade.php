@@ -42,44 +42,8 @@
                         CV. TITA JAYA
                     </a>
                 </div>
-
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav nav-tabs navbar-right">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li><a href="{{ route('admin.login') }}">Login</a></li>
-                        @else
-                            <li role="presentation"><a href="{{ route('admin.home') }}">Beranda</a></li>
-                            <li role="presentation"><a href="{{ route('admin.pelanggan') }}">Pelanggan</a></li>
-                            <li role="presentation"><a href="{{ route('admin.transaksi') }}">Transaksi</a></li>
-                            <li role="presentation" class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
-                                    {{ Auth::user()->username }} <span class="caret"></span>
-                                </a>
-
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
+                @yield('navbar')
+                
             </div>
         </nav>
 
