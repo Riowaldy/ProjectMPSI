@@ -43,7 +43,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default">
+            <div class="panel panel-primary">
               <!-- Default panel contents -->
               <div class="panel-heading"><b><center><h4>Data Barang</h4></center></b>
 
@@ -57,7 +57,7 @@
                       <th><b>@sortablelink('supplier')</b></th>
                       <th><b>@sortablelink('harga')</b></th>
                       {{ csrf_field() }}
-                      <td><button type="button" title="Tambah Data" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#tambah_barang">&nbsp;&nbsp;Tambah Barang&nbsp;&nbsp;</button></td>
+                      <th><button type="button" title="Tambah Data" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#tambah_barang">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></th>
                     <tr>
                     @foreach($barangs as $barang)
                     <tr>
@@ -66,8 +66,8 @@
                       <td>{{ $barang->supplier }}</td>
                       <td>Rp.{{ $barang->harga }},00</td>
                       <td>
-                        <button type="submit" title="Update" class="btn btn-xs btn-info" data-id="{{$barang->id}}" data-nama="{{$barang->nama}}" data-jenis="{{$barang->jenis}}" data-supplier="{{$barang->supplier}}" data-harga="{{$barang->harga}}" data-toggle="modal" data-target="#update_barang">&nbsp;&nbsp;&nbsp;Edit&nbsp;&nbsp;</button> &nbsp;
-                        <button type="submit" title="Delete" class="btn btn-xs btn-danger" data-id="{{$barang->id}}" data-toggle="modal" data-target="#hapus_barang">Delete</button>
+                        <button type="submit" title="Update" class="btn btn-xs btn-info" data-id="{{$barang->id}}" data-nama="{{$barang->nama}}" data-jenis="{{$barang->jenis}}" data-supplier="{{$barang->supplier}}" data-harga="{{$barang->harga}}" data-toggle="modal" data-target="#update_barang"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button> &nbsp;
+                        <button type="submit" title="Delete" class="btn btn-xs btn-danger" data-id="{{$barang->id}}" data-toggle="modal" data-target="#hapus_barang"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
                       </td>
                     </tr>
                     @endforeach

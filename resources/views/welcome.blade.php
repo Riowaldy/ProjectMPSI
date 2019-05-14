@@ -101,62 +101,62 @@
           </div>
         <div class="row">
           <div class="col-sm-3">
-            <a href="" class="thumbnail">
+            <a class="thumbnail">
               <img src="img/blinds1.jpg">
             </a>
           </div>
           <div class="col-sm-3">
-            <a href="" class="thumbnail">
+            <a class="thumbnail">
               <img src="img/blinds2.jpg">
             </a>
           </div>
           <div class="col-sm-3">
-            <a href="" class="thumbnail">
+            <a class="thumbnail">
               <img src="img/blinds3.jpg">
             </a>
           </div>
           <div class="col-sm-3">
-            <a href="" class="thumbnail">
+            <a class="thumbnail">
               <img src="img/blinds4.jpg">
             </a>
           </div>
           <div class="col-sm-3">
-            <a href="" class="thumbnail">
+            <a class="thumbnail">
               <img src="img/wallpaper1.jpg">
             </a>
           </div>
           <div class="col-sm-3">
-            <a href="" class="thumbnail">
+            <a class="thumbnail">
               <img src="img/wallpaper2.jpg">
             </a>
           </div>
           <div class="col-sm-3">
-            <a href="" class="thumbnail">
+            <a class="thumbnail">
               <img src="img/wallpaper3.jpg">
             </a>
           </div>
           <div class="col-sm-3">
-            <a href="" class="thumbnail">
+            <a class="thumbnail">
               <img src="img/wallpaper4.jpg">
             </a>
           </div>
           <div class="col-sm-3">
-            <a href="" class="thumbnail">
+            <a class="thumbnail">
               <img src="img/gorden1.jpg">
             </a>
           </div>
           <div class="col-sm-3">
-            <a href="" class="thumbnail">
+            <a class="thumbnail">
               <img src="img/gorden2.jpg">
             </a>
           </div>
           <div class="col-sm-3">
-            <a href="" class="thumbnail">
+            <a class="thumbnail">
               <img src="img/gorden3.jpg">
             </a>
           </div>
           <div class="col-sm-3">
-            <a href="" class="thumbnail">
+            <a class="thumbnail">
               <img src="img/gorden4.jpg">
             </a>
           </div>
@@ -176,13 +176,13 @@
             <div class="row">
               <div class="col-sm-8 col-sm-offset-2 ">
                 <div class="list-group">
-                  <a href="#" class="list-group-item active text-center">
+                  <a class="list-group-item active text-center">
                     CV. TITA JAYA
                   </a>
-                  <a href="#" class="list-group-item">Telp     : 081 3340 98 907 / 081 7090 1927</a>
-                  <a href="#" class="list-group-item">Email    : titajayaa@gmail.com</a>
-                  <a href="#" class="list-group-item">Alamat   : Tawangsari Permai Blok.A No.20 , Taman, Sidoarjo</a>
-                  <a href="#" class="list-group-item">Kode pos : 61257</a>
+                  <a class="list-group-item">Telp     : 081 3340 98 907 / 081 7090 1927</a>
+                  <a class="list-group-item">Email    : titajayaa@gmail.com</a>
+                  <a class="list-group-item">Alamat   : Tawangsari Permai Blok.A No.20 , Taman, Sidoarjo</a>
+                  <a class="list-group-item">Kode pos : 61257</a>
                 </div>
               </div>
             </div>
@@ -196,7 +196,7 @@
       <div class="container text-center">
         <div class="row">
           <div class="col-sm-12">
-            <p>&copy; copyright 2019 | Build by Riowaldy Indrawan</a></p>
+            <p>&copy; copyright 2019 | Build by Busite</a></p>
           </div>
         </div>
       </div>

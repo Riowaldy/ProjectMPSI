@@ -42,7 +42,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default">
+            <div class="panel panel-primary">
               <!-- Default panel contents -->
               <div class="panel-heading"><b><center><h4>Data Pelanggan</h4></center></b>
 
@@ -57,7 +57,7 @@
                       <td>
                         <form action="{{ route('owner.PelangganPDF') }}">
                         {{ csrf_field() }}
-                          <button type="submit" title="Cetak PDF" class="btn btn-xs btn-danger">Cetak PDF</button>
+                          <button type="submit" title="Cetak PDF" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-print" aria-hidden="true"></span></button>
                         </form>
                       </td>
                       <td></td>

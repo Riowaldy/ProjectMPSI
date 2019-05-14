@@ -43,7 +43,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default">
+            <div class="panel panel-primary">
               <!-- Default panel contents -->
               <div class="panel-heading"><b><center><h4>Data Pelanggan</h4></center></b>
 
@@ -56,8 +56,8 @@
                       <th><b>@sortablelink('alamat')</b></th>
                       <th><b>@sortablelink('no_tlp', 'Nomor Telepon')</b></th>
                       {{ csrf_field() }}
-                      <td><button type="button" title="Tambah Data" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#tambah_pelanggan">Tambah Pelanggan</button></td>
-                      <td></td>
+                      <th><button type="button" title="Tambah Data" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#tambah_pelanggan">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></th>
+                      <th></th>
                     <tr>
                     @foreach($pelanggans as $pelanggan)
                     <tr>
@@ -65,8 +65,8 @@
                       <td>{{ $pelanggan->alamat }}</td>
                       <td>{{ $pelanggan->no_tlp }}</td>
                       <td>
-                        <button type="submit" title="Update" class="btn btn-xs btn-info" data-id="{{$pelanggan->id}}" data-nama="{{$pelanggan->nama}}" data-alamat="{{$pelanggan->alamat}}" data-no_tlp="{{$pelanggan->no_tlp}}" data-toggle="modal" data-target="#update_pelanggan">&nbsp;&nbsp;&nbsp;Edit&nbsp;&nbsp;</button> &nbsp;
-                        <button type="submit" title="Delete" class="btn btn-xs btn-danger" data-id="{{$pelanggan->id}}" data-toggle="modal" data-target="#hapus_pelanggan">&nbsp;Delete&nbsp;</button>
+                        <button type="submit" title="Update" class="btn btn-xs btn-info" data-id="{{$pelanggan->id}}" data-nama="{{$pelanggan->nama}}" data-alamat="{{$pelanggan->alamat}}" data-no_tlp="{{$pelanggan->no_tlp}}" data-toggle="modal" data-target="#update_pelanggan"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button> &nbsp;
+                        <button type="submit" title="Delete" class="btn btn-xs btn-danger" data-id="{{$pelanggan->id}}" data-toggle="modal" data-target="#hapus_pelanggan"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
                       </td>
                       <td>
                         <button type="button" title="Transaksi" class="btn btn-xs btn-info" data-pelanggan_id="{{$pelanggan->id}}" data-nama_pelanggan="{{$pelanggan->nama}}" data-toggle="modal" data-target="#tambah_transaksi">Transaksi</button>

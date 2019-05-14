@@ -38,7 +38,7 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand">
                         CV. TITA JAYA
                     </a>
                 </div>
